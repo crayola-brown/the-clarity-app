@@ -23,10 +23,25 @@ function SignInController($scope) {
     };
  
     // processes authentication when callback is received.
+    // this:
     $scope.signInCallback = function(authResult) {
         $scope.$apply(function() {
             $scope.processAuth(authResult);
         });
+    //needs to incorpporate this:
+	function signinCallback(result) {
+    	if (result['access_token']) 
+    	{
+        document.querySelector('#signinButton').setAttribute('style', 'display:none');
+        loadProfileInfo();
+    	} 
+    	else if (result['error']) 
+    	{
+       console.log(result);
+   		}
+} 
+
+
     };
  
     // renders the sign in button.
