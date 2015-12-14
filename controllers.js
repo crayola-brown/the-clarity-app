@@ -14,6 +14,7 @@ function SignInController($scope) {
         // check if authentication has been successful.
         if(authResult['access_token']) {
   			$scope.signedIn = true;
+ 		
  			//do work/forward pageview?
         } else if(authResult['error']) {
             $scope.signedIn = false;
@@ -50,3 +51,13 @@ function SignInController($scope) {
     // calls start function on load.
     $scope.start();
 }
+
+//backstretch controller
+angular.module('myModule')
+.controller('stretchController', function($scope){
+  $scope.images = [
+    'http://dl.dropbox.com/u/515046/www/garfield-interior.jpg',
+    'http://dl.dropbox.com/u/515046/www/outside.jpg',
+    'http://dl.dropbox.com/u/515046/www/cheers.jpg'
+  ];
+});
