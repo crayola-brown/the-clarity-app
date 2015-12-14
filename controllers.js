@@ -7,6 +7,7 @@ app.controller('myControl', function($scope){
 function SignInController($scope) {
     // flag we use to show or hide the button in the HTML.
     $scope.signedIn = false;
+    console.log('hail santa');
  
     // authentication processing and error handling.
     // authResult is a JSON object.
@@ -26,20 +27,16 @@ function SignInController($scope) {
     // this:
     $scope.signInCallback = function(authResult) {
         $scope.$apply(function() {
-            $scope.processAuth(authResult);
-        });
-    //needs to incorpporate this:
-	function signinCallback(result) {
-    	if (result['access_token']) 
-    	{
-        document.querySelector('#signinButton').setAttribute('style', 'display:none');
+            $scope.processAuth(authResult); {
+    		if(authResult['access_token']) {
+        angular.element('#signinButton').attr('style', 'display:none');
         loadProfileInfo();
+
     	} 
-    	else if (result['error']) 
-    	{
-       console.log(result);
+    	else if (result['error']) {
+       console.log(authResult);
    		}
-} 
+	} 
 
 
     };
@@ -49,9 +46,9 @@ function SignInController($scope) {
         gapi.signin.render('signInButton',
             {
             'callback': $scope.signInCallback, // Function handling the callback.
-            'clientid': '200772488238-3oe49iv349c5mj0g3avld1ch7igip7j5.apps.googleusercontent.com', 
-            'requestvisibleactions': 'http://schemas.google.com/AddActivity', // Visible actions, scope and cookie policy wont be described now,
-                                                                                  // as their explanation is available in Google+ API Documentation.
+            'clientid': '200772488238-3oe49iv349c5mj0g3avld1ch7igip7j5.apps.googleusercontent.com&output=embed', 
+            'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+                                                                                  
             'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
             'cookiepolicy': 'single_host_origin'
             }
