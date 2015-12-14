@@ -1,8 +1,10 @@
 var app = angular.module('myModule');
 
-app.factory("service", function(){
-	var //stored information
+//getting user information from the API
 
+app.factory("service", function(){
+	var instantiatedService =
+//factory function body which constructs iS
 	return{
 		save:function(param){
 			"" = ""
