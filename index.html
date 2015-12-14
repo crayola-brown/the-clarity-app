@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='myModule'>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="stylie.css">
 </head>
-<body ng-app='myModule' ng-model="">
+<body>
+	<ng-view></ng-view>
+
+<p>APP</p>
 
 
-<script type="text/javascript" src="controllers.js"</script>
-<script type="text/javascript" src="service.js"</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="service.js"></script>
+<script type="text/javascript" src="controllers.js"></script>
+
+
 </body>
 </html>

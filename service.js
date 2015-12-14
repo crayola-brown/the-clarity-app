@@ -1,17 +1,17 @@
-var app = angular.module('myModule');
 
-//getting user information from the API
+
+//on the controller that calls our API
 
 app.factory("service", function(){
-	var instantiatedService =
+//	var instantiatedService =
 //factory function body which constructs iS
-	return{
-		save:function(param){
-			"" = ""
-		},
-		get:function(){ 
+//	return{
+//		save:function(param){
+//			"" = ""
+//		},
+//		get:function(){ 
  				
-				}
-		}
-	}
+//				}
+//		}
+//	}
 });

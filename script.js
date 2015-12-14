@@ -1,12 +1,15 @@
-var app = angular.module('myModule', ['ng-route']);
+var app = angular.module('myModule', ['ngRoute']);
 
-app.config($routeProvider){
+app.config(function($routeProvider){
 	$routeProvider.when('/',
-		templateurl: 'landing.html',
+	{
+		templateUrl: 'landing.html',
 		controller: 'myControl'
-});
-
-$routeProvider.when('/home',
-	templateurl: 'index.html',
-	controller: 'myControl'
+	})
+	
+	.when('/home', 
+	{
+		templateUrl: 'index.html',
+		controller: 'myControl'
+	});
 });
