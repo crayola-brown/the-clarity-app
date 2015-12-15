@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html ng-app='myModule'>
+<!-- <html ng-app='myModule'> -->
+<html>
 <head>
 	<title></title>
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="stylie.css">
 </head>
-<body ng-backstretch>
-	<div ng-view=""></div>
+<!-- <body ng-backstretch>
+ -->
+<body>
+ 	<div ng-view=""></div>
 
+<div class="g-signin2" data-onsuccess="onSignIn">Login</div>
+       
 
-<span id="signInButton" class="offset6">
+<!-- <span id="signInButton" class="offset6">
   <span class="g-signin"
       data-callback="signinCallback"
       data-clientid="200772488238-3oe49iv349c5mj0g3avld1ch7igip7j5.apps.googleusercontent.com"
@@ -17,22 +22,35 @@
       data-requestvisibleactions="http://schemas.google.com/WantActivity"
       data-scope="https://http://www.googleapis.com/auth/plus.login">
   </span>
-</span>
+</span> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<!-- <script src="bower_components/ng-backstretch/dist/ng-backstretch.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="service.js"></script>
-<script type="text/javascript" src="controllers.js"></script>
-<script>
-    (function() {
-    var po = document.createElement('script'); 
-    po.type = 'text/javascript'; 
-    po.async = true;
-    po.src = 'https://apis.google.com/js/client:plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
-</script>
+
+
+
+<!-- &output=emb"> -->
+
+<!-- <script type="text/javascript" src="script.js"></script> -->
+<!-- <script type="text/javascript" src="service.js"></script>
+<script type="text/javascript" src="controllers.js"></script> -->
+
+<!-- Google Plus Nonsense -->
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="200772488238-3oe49iv349c5mj0g3avld1ch7igip7j5.apps.googleusercontent.com">
+<script src="login.js"></script>
+<!-- <script>
+//     (function() {
+//     var po = document.createElement('script'); 
+//     po.type = 'text/javascript'; 
+//     po.async = true;
+//     po.src = 'https://apis.google.com/js/client:plusone.js';
+//     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+//      })();
+// </script>-->
 
 </body>
 </html>
